@@ -39,7 +39,7 @@ use App\Http\Controllers\Admin\AdminLanguageController;
 Route::group(['middleware' => ['XssSanitize']], function () {
 
 /* Front */
-Route::get('/', [FrontController::class, 'home'])->name('home');
+Route::get('/', [FrontController::class, 'home_4'])->name('home');
 Route::get('/home/layout/1', [FrontController::class, 'home_1'])->name('home_1');
 Route::get('/home/layout/2', [FrontController::class, 'home_2'])->name('home_2');
 Route::get('/home/layout/3', [FrontController::class, 'home_3'])->name('home_3');
@@ -75,7 +75,7 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/dashboard',[AdminController::class,'dashboard'])->name('admin_dashboard');
     Route::get('/profile',[AdminController::class,'profile'])->name('admin_profile');
     Route::post('/profile',[AdminController::class,'profile_update'])->name('admin_profile_update');
-    
+
     Route::get('/setting/general',[AdminSettingController::class,'general'])->name('admin_setting_general');
     Route::post('/setting/general/update',[AdminSettingController::class,'general_update'])->name('admin_setting_general_update');
 
@@ -285,7 +285,7 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/other-page/custom/destroy/{id}',[AdminOtherPageItemController::class,'custom_page_destroy'])->name('admin_other_page_item_custom_page_destroy');
 
 
-    
+
 
     Route::get('/menu/index',[AdminMenuController::class,'index'])->name('admin_menu_index');
     Route::post('/menu/update',[AdminMenuController::class,'update'])->name('admin_menu_update');
