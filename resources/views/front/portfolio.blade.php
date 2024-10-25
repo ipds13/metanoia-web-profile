@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <!-- <div class="row justify-content-center">
             <div class="col-xl-10">
                 <div class="project-details__content-right">
                     <div class="project-details__details-box">
@@ -52,12 +52,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="project-details__content">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="project-details__content-left">
-                        <h3 class="mb-4 mt-5">{{ __('About this project') }}</h3>
+                        <h3 class="mb-4 mt-5">{{ __('Overview') }}</h3>
                         <p>
                             {!! clean($portfolio->description) !!}
                         </p>
@@ -65,7 +65,10 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="btn-box animate-2">
+            <a href="https://elearning.travelkuy.biz.id/" target="_blank" class="theme-btn btn-style-one hover-light"><span class="btn-title">{{ __('Discover More') }}</span></a>
+        </div>
+        <!-- <div class="row">
             <div class="col-xl-12">
                 <div class="project-details__pagination-box">
                     <ul class="project-details__pagination list-unstyled clearfix">
@@ -96,7 +99,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 @endsection

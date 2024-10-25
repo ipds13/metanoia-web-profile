@@ -80,7 +80,7 @@
                         <nav class="nav main-menu">
                             <ul class="navigation">
 
-                                @if($global_setting->home_show == 'All')
+                                <!-- @if($global_setting->home_show == 'All')
                                 <li class="{{ (Request::is('/')||Route::is('home_1')||Route::is('home_2')||Route::is('home_3')||Route::is('home_4')) ? 'current' : ''; }} dropdown"><a href="javascript:;">{{ __('Home') }}</a>
                                     <ul >
                                         <li ><a href="{{ route('home_1') }}">{{ __('Home Layout 1') }}</a></li>
@@ -113,10 +113,10 @@
                                 <li class="{{ Route::is('home_4') ? 'current' : ''; }}">
                                     <a href="{{ route('home_4') }}">{{ __('Home') }}</a>
                                 </li>
-                                @endif
+                                @endif -->
 
 
-                                @foreach($global_menu as $item)
+                                <!-- @foreach($global_menu as $item)
                                 @php 
                                     $menu_arr[$item->name] = $item->status;
                                 @endphp
@@ -147,7 +147,13 @@
                                         <li ><a href="{{ route('custom_page',$item->slug) }}">{{ $item->name }}</a></li>
                                         @endforeach
                                     </ul>
+                                </li> -->
+
+                                @if($menu_arr['About'] == 'Show')
+                                <li class="{{ Request::is('about') ? 'current' : ''; }}">
+                                    <a href="{{ route('about') }}">{{ __('About Us') }}</a>
                                 </li>
+                                @endif
 
                                 @if($menu_arr['Services'] == 'Show')
                                 <li class="{{ Request::is('services') ? 'current' : ''; }}">
@@ -157,7 +163,7 @@
 
                                 @if($menu_arr['Portfolios'] == 'Show')
                                 <li class="{{ Request::is('portfolios') ? 'current' : ''; }}">
-                                    <a href="{{ route('portfolios') }}">{{ __('Portfolios') }}</a>
+                                    <a href="{{ route('portfolios') }}">{{ __('Products') }}</a>
                                 </li>
                                 @endif
 
@@ -173,7 +179,7 @@
                                 </li>
                                 @endif
                                 
-                                @php
+                                <!-- @php
                                 $total_lang = \App\Models\Language::count();
                                 @endphp
                                 @if($total_lang > 1)
@@ -189,24 +195,13 @@
                                         </select>
                                     </form>
                                 </li>
-                                @endif
+                                @endif -->
                                 
                             </ul>
                         </nav>
                     </div>
 
                     <div class="outer-box">
-                        <!-- Header Search -->
-                        <button class="ui-btn ui-btn search-btn">
-                            <span class="icon lnr lnr-icon-search"></span>
-                        </button>
-                        @if($global_setting->top_bar_phone!='')
-                        <a href="tel:{{ $global_setting->top_bar_phone }}" class="info-btn">
-                            <i class="icon lnr-icon-phone-handset"></i>
-                            <small >{{ __('Call Anytime') }}</small>
-                            {{ $global_setting->top_bar_phone }}
-                        </a>
-                        @endif
                         <!-- Mobile Nav toggler -->
                         <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
                     </div>
@@ -427,10 +422,10 @@
                                 <div class="widget-content">
                                     <ul class="user-links two-column">
                                         <li ><a href="{{ route('about') }}">{{ __('About') }}</a></li>
-                                        <li ><a href="{{ route('team_members') }}">{{ __('Team Members') }}</a></li>
+                                        <!-- <li ><a href="{{ route('team_members') }}">{{ __('Team Members') }}</a></li> -->
                                         <li ><a href="{{ route('services') }}">{{ __('Services') }}</a></li>
-                                        <li ><a href="{{ route('testimonials') }}">{{ __('Testimonials') }}</a></li>
-                                        <li ><a href="{{ route('portfolios') }}">{{ __('Portfolios') }}</a></li>
+                                        <!-- <li ><a href="{{ route('testimonials') }}">{{ __('Testimonials') }}</a></li> -->
+                                        <li ><a href="{{ route('portfolios') }}">{{ __('Products') }}</a></li>
                                         <li ><a href="{{ route('faqs') }}">{{ __('FAQ') }}</a></li>
                                         <li ><a href="{{ route('contact') }}">{{ __('Contact') }}</a></li>
                                         <li ><a href="{{ route('terms') }}">{{ __('Terms of Use') }}</a></li>

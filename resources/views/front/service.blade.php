@@ -7,7 +7,7 @@
 <section class="page-title" style="background-image: url({{ asset('uploads/'.$global_setting->banner) }});">
     <div class="auto-container">
         <div class="title-outer">
-            <h1 class="title">{{ $service->name }}</h1>
+            <h1 style="font-size:5vh" class="title">{{ $service->name }}</h1>
             <ul class="page-breadcrumb">
                 <li><a href="{{ route('home') }}">{{ __('Home') }}</a></li>
                 <li><a href="{{ route('services') }}">{{ $global_other_page_items->page_services_title }}</a></li>

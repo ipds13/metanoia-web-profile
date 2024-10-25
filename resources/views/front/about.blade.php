@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     @endforeach
-                    <div class="other-info">
+                    <!-- <div class="other-info">
                         <div class="author-info">
                             <div class="inner">
                                 <figure class="thumb"><img src="{{ asset('uploads/'.$welcome_one_items->person_photo) }}" alt=""></figure>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                         <a href="{{ $welcome_one_items->button_url }}" class="theme-btn btn-style-one"><span class="btn-title">{{ $welcome_one_items->button_text }}</span></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
