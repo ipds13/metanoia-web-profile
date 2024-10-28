@@ -44,9 +44,9 @@
                 <li ><a href="{{ $global_setting->youtube }}"><span class="fab fa-youtube"></span></a></li>
                 @endif
 
-                @if($global_setting->pinterest!='')
+                <!-- @if($global_setting->pinterest!='')
                 <li ><a href="{{ $global_setting->pinterest }}"><span class="fab fa-pinterest-p"></span></a></li>
-                @endif
+                @endif -->
             </ul>
             @endif
         </div>
