@@ -7,7 +7,7 @@
 
     <title >@yield('seo_title')</title>
     <meta name="description" content="@yield('seo_meta_description')">
-    
+
     <link rel="shortcut icon" href="{{ asset('uploads/'.$global_setting->favicon) }}" type="image/x-icon">
     <link rel="icon" href="{{ asset('uploads/'.$global_setting->favicon) }}" type="image/x-icon">
 
@@ -58,16 +58,16 @@
 <body>
 
     <div class="page-wrapper">
-        
+
         @if($global_setting->preloader == 'Show')
         <div class="preloader"></div>
         @endif
-        
+
         <!-- Main Header-->
         <header class="main-header header-style-two">
-            
+
             @include('front.layouts.top')
-            
+
             <div class="header-lower">
                 <!-- Main box -->
                 <div class="main-box">
@@ -76,7 +76,7 @@
                     </div>
 
                     <!--Nav Box-->
-                    <div class="nav-outer">    
+                    <div class="nav-outer">
                         <nav class="nav main-menu">
                             <ul class="navigation">
 
@@ -117,7 +117,7 @@
 
 
                                 <!-- @foreach($global_menu as $item)
-                                @php 
+                                @php
                                     $menu_arr[$item->name] = $item->status;
                                 @endphp
                                 @endforeach
@@ -178,7 +178,7 @@
                                     <a href="{{ route('contact') }}">{{ __('Contact') }}</a>
                                 </li>
                                 @endif
-                                
+
                                 <!-- @php
                                 $total_lang = \App\Models\Language::count();
                                 @endphp
@@ -196,7 +196,7 @@
                                     </form>
                                 </li>
                                 @endif -->
-                                
+
                             </ul>
                         </nav>
                     </div>
@@ -211,14 +211,14 @@
             <!-- Mobile Menu  -->
             <div class="mobile-menu">
                 <div class="menu-backdrop"></div>
-            
+
                 <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
                 <nav class="menu-box">
                     <div class="upper-box">
                         <div class="nav-logo"><a href="{{ route('home') }}"><img src="{{ asset('uploads/'.$global_setting->logo) }}" alt="{{ env('APP_NAME') }}" title=""></a></div>
                         <div class="close-btn"><i class="icon fa fa-times"></i></div>
                     </div>
-            
+
                     <ul class="navigation clearfix">
                         <!--Keep This Empty / Menu will come through Javascript-->
                     </ul>
@@ -270,9 +270,9 @@
                         <li ><a href="{{ $global_setting->youtube }}"><i class="fab fa-youtube"></i></a></li>
                         @endif
 
-                        @if($global_setting->pinterest!='')
+                        <!-- @if($global_setting->pinterest!='')
                         <li ><a href="{{ $global_setting->pinterest }}"><i class="fab fa-pinterest-p"></i></a></li>
-                        @endif
+                        @endif -->
                     </ul>
                     @endif
                 </nav>
@@ -282,7 +282,7 @@
             <div class="search-popup">
                 <span class="search-back-drop"></span>
                 <button class="close-search"><span class="fa fa-times"></span></button>
-            
+
                 <div class="search-inner">
                     <form method="get" action="{{ route('search') }}">
                         <div class="form-group">
@@ -308,7 +308,7 @@
                                 @endif
                             </a>
                         </div>
-            
+
                         <!--Right Col-->
                         <div class="nav-outer">
                             <!-- Main Menu -->
@@ -319,7 +319,7 @@
                                     </ul>
                                 </div>
                             </nav><!-- Main Menu End-->
-            
+
                             <!--Mobile Navigation Toggler-->
                             <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
                         </div>
@@ -335,7 +335,7 @@
         <!-- Main Footer -->
         <footer class="main-footer">
             <div class="bg bg-pattern-6"></div>
-            
+
             @if($global_setting->footer_phone != '' || $global_setting->footer_email != '' || $global_setting->footer_address != '')
             <div class="footer-upper">
                 <div class="auto-container">
@@ -349,7 +349,7 @@
                             </div>
                         </div>
                         @endif
-                        
+
                         @if($global_setting->footer_email != '')
                         <div class="contact-info-block col-lg-4 col-md-6">
                             <div class="inner">
@@ -406,15 +406,15 @@
                                         <li ><a href="{{ $global_setting->youtube }}"><i class="fab fa-youtube"></i></a></li>
                                         @endif
 
-                                        @if($global_setting->pinterest!='')
+                                        <!-- @if($global_setting->pinterest!='')
                                         <li ><a href="{{ $global_setting->pinterest }}"><i class="fab fa-pinterest-p"></i></a></li>
-                                        @endif
+                                        @endif -->
                                     </ul>
                                     @endif
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Footer COlumn -->
                         <div class="footer-column col-xl-4 col-lg-4 col-md-6">
                             <div class="widget links-widget">
@@ -423,15 +423,17 @@
                                     <ul class="user-links two-column">
                                         <li ><a href="{{ route('about') }}">{{ __('About') }}</a></li>
                                         <!-- <li ><a href="{{ route('team_members') }}">{{ __('Team Members') }}</a></li> -->
-                                        <li ><a href="{{ route('services') }}">{{ __('Services') }}</a></li>
+
                                         <!-- <li ><a href="{{ route('testimonials') }}">{{ __('Testimonials') }}</a></li> -->
-                                        <li ><a href="{{ route('portfolios') }}">{{ __('Products') }}</a></li>
-                                        <li ><a href="{{ route('faqs') }}">{{ __('FAQ') }}</a></li>
-                                        <li ><a href="{{ route('contact') }}">{{ __('Contact') }}</a></li>
                                         <li ><a href="{{ route('terms') }}">{{ __('Terms of Use') }}</a></li>
-                                        <li ><a href="{{ route('pricing_plans') }}">{{ __('Pricing') }}</a></li>
+                                        <li ><a href="{{ route('services') }}">{{ __('Services') }}</a></li>
                                         <li ><a href="{{ route('privacy') }}">{{ __('Privacy Policy') }}</a></li>
-                                    </ul>                                
+                                        <li ><a href="{{ route('portfolios') }}">{{ __('Products') }}</a></li>
+
+                                        <li ><a href="{{ route('faqs') }}">{{ __('FAQ') }}</a></li>
+                                        <!-- <li ><a href="{{ route('pricing_plans') }}">{{ __('Pricing') }}</a></li> -->
+                                        <li ><a href="{{ route('contact') }}">{{ __('Contact') }}</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -466,9 +468,9 @@
         </footer>
 
     </div>
-    
+
     <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
-    
+
     @include('front.layouts.scripts')
 
     @if($global_setting->tawk_live_chat_status == 'Show')
