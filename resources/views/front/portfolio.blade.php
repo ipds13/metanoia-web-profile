@@ -66,7 +66,7 @@
             </div>
         </div>
         <div class="btn-box animate-2">
-            <a href="https://elearning.travelkuy.biz.id/" target="_blank" class="theme-btn btn-style-one hover-light"><span class="btn-title">{{ __('Discover More') }}</span></a>
+            <a href="https://moveacademy.id/" target="_blank" class="theme-btn btn-style-one hover-light"><span class="btn-title">{{ __('Discover More') }}</span></a>
         </div>
         <!-- <div class="row">
             <div class="col-xl-12">
